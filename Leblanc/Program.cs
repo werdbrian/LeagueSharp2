@@ -579,7 +579,8 @@ namespace Leblanc
                 W.Cast(wTarget, true, true);
 
             if (useE && eTarget != null && E.IsReady())
-                E.CastIfHitchanceEquals(eTarget, GetEHitChance);
+               // E.CastIfHitchanceEquals(eTarget, GetEHitChance);
+                E.SPredictionCast(eTarget,GetEHitChance);
         }
 
         private static float GetRQDamage
@@ -692,7 +693,8 @@ namespace Leblanc
                 {
                     if (E.IsReady() && ObjectManager.Player.Distance(enemy) < E.Range)
                     {
-                        E.CastIfHitchanceEquals(enemy, GetEHitChance);
+                       // E.CastIfHitchanceEquals(enemy, GetEHitChance);
+                        E.SPredictionCast(enemy,GetEHitChance);
                     }
                     else if (R.IsReady() && ObjectManager.Player.Distance(enemy) < E.Range &&
                              ObjectManager.Player.Spellbook.GetSpell(SpellSlot.R).Name == "LeblancSoulShackleM")
@@ -762,7 +764,8 @@ namespace Leblanc
                             if (R.IsReady())
                                 R.CastOnUnit(qTarget);
                             if (E.IsReady())
-                                E.Cast(qTarget);
+                                E.SPredictionCast(qTarget,GetEHitChance);
+
                             W.Cast();
                         }
                     }
@@ -836,7 +839,9 @@ namespace Leblanc
                 W.Cast(mob.Position);
 
             if (useE && E.IsReady())
-                E.Cast(mob);
+                //E.Cast(mob);
+                E.SPredictionCast(mob,GetEHitChance);
+
         }
 
         private static void DoToggleHarass()
