@@ -839,8 +839,8 @@ namespace Leblanc
                 W.Cast(mob.Position);
 
             if (useE && E.IsReady())
-                //E.Cast(mob);
-                E.SPredictionCast(mob,GetEHitChance);
+                E.Cast(mob.Position);
+                //E.SPredictionCast(mob,GetEHitChance);
 
         }
 
@@ -870,7 +870,9 @@ namespace Leblanc
                 if (t != null && E.IsReady() &&
                     ObjectManager.Player.ManaPercentage() >=
                     Config.SubMenu("Harass").Item("HarassManaE").GetValue<Slider>().Value)
-                    E.CastIfHitchanceEquals(t, GetEHitChance);
+                    //E.CastIfHitchanceEquals(t, GetEHitChance);
+                    E.SPredictionCast(t,GetEHitChance);
+                    
             }
         }
 
