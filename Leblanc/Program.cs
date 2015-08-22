@@ -309,7 +309,7 @@ namespace Leblanc
                 E.CastIfHitchanceEquals(unit, GetEHitChance);
                 //var person = Obj_AI_Hero;
                 //person = unit;
-                E.SPredictionCast(unit,GetEHitChance);
+            //    E.SPredictionCast(unit,GetEHitChance);
             }
             else if (R.IsReady() && ObjectManager.Player.Spellbook.GetSpell(SpellSlot.R).Name == "LeblancSoulShackleM" &&
                      isValidTarget)
