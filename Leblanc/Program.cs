@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
+using ShineCommon;
 using SPrediction;
 using Color = System.Drawing.Color;
 
