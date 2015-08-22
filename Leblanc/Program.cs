@@ -51,7 +51,7 @@ namespace Leblanc
         public static bool LeBlancClone
         {
             get { return leBlancClone; }
-            set { leBlancClone = value; }
+            set { leBlancClone = null; }
         }
 
         private static void Main(string[] args)
