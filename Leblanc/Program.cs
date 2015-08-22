@@ -426,7 +426,7 @@ namespace Leblanc
                 if (t == null)
                     return;
 
-                E.Cast(t);
+                //E.Cast(t);
                 E.SPredictionCast(t,GetEHitChance);
 
                 R.Cast(t);
@@ -537,11 +537,13 @@ namespace Leblanc
                 if (vComboType == ComboType.ComboER)
                 {
                     if (!R.IsReady())
-                        E.CastIfHitchanceEquals(t, GetEHitChance);
+                   //     E.CastIfHitchanceEquals(t, GetEHitChance);
+                         E.SPredictionCast(t,GetEHitChance);
                 }
                 else
                 {
-                    E.CastIfHitchanceEquals(t, GetEHitChance);
+                 //   E.CastIfHitchanceEquals(t, GetEHitChance);
+                 E.SPredictionCast(t,GetEHitChance);
                 }
             }
 
