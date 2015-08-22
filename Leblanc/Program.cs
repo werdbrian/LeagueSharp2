@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
+using ShineCommon;
+using ShineSharp.Champions;
 using Color = System.Drawing.Color;
 
 #endregion
@@ -49,7 +51,7 @@ namespace Leblanc
         public static bool LeBlancClone
         {
             get { return leBlancClone; }
-            set { leBlancClone = value; }
+            set { leBlancClone = 1; }
         }
 
         private static void Main(string[] args)
@@ -254,6 +256,8 @@ namespace Leblanc
                 String.Format(
                     "<font color='#70DBDB'>xQx</font> <font color='#FFFFFF'>{0}</font> <font color='#70DBDB'>Loaded!</font>",
                     ChampionName));
+                    
+            ShineCommon.Maths.Prediction.Initialize();
         }
 
         private static int FindCounterStatusForTarget(string enemyBaseSkinName)
