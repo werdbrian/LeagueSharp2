@@ -305,7 +305,8 @@ namespace Leblanc
 
             if (E.IsReady() && isValidTarget)
             {
-                E.CastIfHitchanceEquals(unit, GetEHitChance);
+                //E.CastIfHitchanceEquals(unit, GetEHitChance);
+                SPredictionCast(unit,GetEHitChance);
             }
             else if (R.IsReady() && ObjectManager.Player.Spellbook.GetSpell(SpellSlot.R).Name == "LeblancSoulShackleM" &&
                      isValidTarget)
