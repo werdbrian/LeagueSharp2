@@ -49,7 +49,7 @@ namespace Leblanc
         public static bool LeBlancClone
         {
             get { return leBlancClone; }
-            set { leBlancClone = 1; }
+            set { leBlancClone = value; }
         }
 
         private static void Main(string[] args)
@@ -255,7 +255,7 @@ namespace Leblanc
                     "<font color='#70DBDB'>xQx</font> <font color='#FFFFFF'>{0}</font> <font color='#70DBDB'>Loaded!</font>",
                     ChampionName));
                     
-            ShineCommon.Maths.Prediction.Initialize();
+           // ShineCommon.Maths.Prediction.Initialize();
         }
 
         private static int FindCounterStatusForTarget(string enemyBaseSkinName)
