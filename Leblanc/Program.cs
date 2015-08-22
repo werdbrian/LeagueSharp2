@@ -846,6 +846,9 @@ namespace Leblanc
 
         private static void DoToggleHarass()
         {
+            var t = TargetSelector.GetTarget(E.Range, TargetSelector.DamageType.Magical);
+
+             E.SPredictionCast(t,GetEHitChance);
             if (Config.SubMenu("Harass").Item("HarassUseTQ").GetValue<KeyBind>().Active)
             {
                 var t = TargetSelector.GetTarget(Q.Range, TargetSelector.DamageType.Magical);
