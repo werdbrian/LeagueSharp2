@@ -49,7 +49,7 @@ namespace Leblanc
         public static bool LeBlancClone
         {
             get { return leBlancClone; }
-            set { leBlancClone = null; }
+            set { leBlancClone = value; }
         }
 
         private static void Main(string[] args)
