@@ -806,13 +806,13 @@ namespace Leblanc
                 }
             }
 
-            var rangedMinionsW = MinionManager.GetMinions(ObjectManager.Player.ServerPosition, W.Range + W.Width + 20);
+            var rangedMinionsW = MinionManager.GetMinions(ObjectManager.Player.ServerPosition, W.Range + W.Width);
             if (!useW || !W.IsReady())
                 return;
 
             var minionsW = W.GetCircularFarmLocation(rangedMinionsW, W.Width * 0.75f);
 
-            if (minionsW.MinionsHit < 2 || !W.IsInRange(minionsW.Position.To3D()))
+            if (minionsW.MinionsHit < 4 || !W.IsInRange(minionsW.Position.To3D()))
                 return;
 
             W.Cast(minionsW.Position);
