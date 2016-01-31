@@ -52,8 +52,8 @@ namespace Zed
                 _player = ObjectManager.Player;
                 if (ObjectManager.Player.BaseSkinName != ChampionName) return;
                 _q = new Spell(SpellSlot.Q, 900f);
-                _w = new Spell(SpellSlot.W, 550f);
-                _e = new Spell(SpellSlot.E, 270f);
+                _w = new Spell(SpellSlot.W, 750f);
+                _e = new Spell(SpellSlot.E, 290f);
                 _r = new Spell(SpellSlot.R, 650f);
 
                 _q.SetSkillshot(0.25f, 50f, 1700f, false, SkillshotType.SkillshotLine);
