@@ -851,6 +851,7 @@ namespace Zed
         private static void KillSteal()
         {
             var target = TargetSelector.GetTarget(2000, TargetSelector.DamageType.Physical);
+            if (target==null) return;
             var igniteDmg = _player.GetSummonerSpellDamage(target, Damage.SummonerSpell.Ignite);
             if (target.IsValidTarget() && _config.Item("UseIgnitekill").GetValue<bool>() && _igniteSlot != SpellSlot.Unknown &&
                 _player.Spellbook.CanUseSpell(_igniteSlot) == SpellState.Ready)
